@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Grocery List</title>
+</head>
+  <body>
+    <h1>My Grocery List:</h1>
+
+        <ul>
+          <% table.each do |grocery| %>
+            <li><%= grocery.values[1] %></li>
+          <% end %>
+        </ul>
+
+        <form action="/groceries" method="post">
+          <label for="grocery_name">New Grocery:</label>
+          <input type="text" id="grocery_name" name="grocery_name" required>
+          <input type="submit" value="Add to list" onsubmit="required()">
+        </form>
+
+  </body>
+</html>
